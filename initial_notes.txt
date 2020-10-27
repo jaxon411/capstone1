@@ -1,0 +1,51 @@
+** EC2 Instances
+	* TMUX (keeps things running even when you disconnect)
+	* tmux attach (command to attach process)
+	* ctrl-b-d ?
+	* T2 large? instance (should be $60 a month if running 24/7)
+	
+
+* HYPOTHESIS TESTING AND GRAPHS
+* BAYESIAN TESTING??
+
+* do NOT do a time series based dataset
+	* anything economic is usually time series
+	* stock opening and closing is a time series
+* do NOT do a summerized dataset
+* ideally a kaggle dataset?
+* high metrics for a trusted data source (lots of people use it)
+* lots of pandas exploration
+* lots of graphs
+	* organized
+	* not too simple, not too busy
+	* LABELS AND TITLES
+	* Land has a github repo with good graph/bad graph examples
+	* ^this is in studyhall in slack
+* lots of a/b testing
+
+* need a readme on github for 3 or so dataset ideas
+* by end of thursday, proposals need to be done
+
+* 2 things:
+	1) idea generation
+	2) competent programming
+		- do a LOT of programming
+* use git, use it frequently, use it rigerrously
+
+* capstone presentation is only 5 minutes
+* you're presenting to a non-technical audience (even if it's pretending)
+* needs to be froma github readme file
+* maybe 10 good graphs seems to be the standard
+* work backwards from the presentation
+	* what few questions do I want to answer?
+	* what questions did they ask?
+	* exploration is key
+* try out different technologies
+	* seaborn?
+	* do stuff you were bad at
+	* do graphs that are hard
+	* LINEAR REGRESSION
+		* Risiduals
+		* QQ plot
+* meeting every day as groups, once in the morning, once in the evening
+
