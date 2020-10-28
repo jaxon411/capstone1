@@ -56,3 +56,19 @@ def GoldValsThruMatch(match_id):
         team2.append(t2)
     
     return np.array([team1,team2])
+
+
+if __name__ == '__main__':
+
+    #plotting
+    fig, ax = plt.subplots()
+
+    ax.plot(GoldValsThruMatch(50)[0], label='Team1')
+    ax.plot(GoldValsThruMatch(50)[1], label='Team2')
+
+    #Formatting
+    ax.set_title('Team gold totals over the course of the match')
+    ax.set_xlabel('Match Time')
+    ax.set_ylabel('Team Gold Total')
+    ax.legend()
+    fig.show();
