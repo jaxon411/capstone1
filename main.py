@@ -38,3 +38,21 @@ def TeamGoldTotals(match_id,num_of_points=1):
     
     return np.array([team1,team2])
 
+def GoldValsThruMatch(match_id):
+    '''
+    params:
+    match_id = int corresponding to the match_id column
+    
+    returns a (2 x n) np.array 
+    '''
+    
+    match_df = player_time[player_time['match_id']==match_id]
+    team1 = []
+    team2 = []
+    
+    for i in range(len(match_df.index)):
+        t1, t2 = TeamGoldTotals(match_id, i)
+        team1.append(t1)
+        team2.append(t2)
+    
+    return np.array([team1,team2])
