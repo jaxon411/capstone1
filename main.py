@@ -10,6 +10,7 @@ import numpy as np
 df_match_out = pd.read_csv('data/match_outcomes.csv')
 df_match = pd.read_csv('data/match.csv')
 df_player_time = pd.read_csv('data/player_time.csv')
+df_objectives = pd.read_csv('data/objectives.csv')
 
 
 def TeamGoldTotals(match_id, time_index=-1):
@@ -72,6 +73,49 @@ def GetMatchWinner(match_id):
         return 'Team 1','blue'
     else:
         return 'Team 2','red'
+
+def GetRoshanTeamKills ():
+    df_objectives[df_objectives['subtype'] == 'CHAT_MESSAGE_ROSHAN_KILL']['player1']
+    roshdf = df_objectives[df_objectives['subtype'] == 'CHAT_MESSAGE_ROSHAN_KILL']
+
+    roshkill_wins = {'rad_kills' : 0,
+                    'dire_kills': 0,
+                    'rad_wins' : 0,
+                    'dire_wins' : 0,
+                    'kill_ties' : 0,
+                    'rad_tie_wins' : 0,
+                    'dire_tie_wins': 0}
+
+    for _id in roshdf['match_id'].unique():
+        #slice into _id's rows only
+        current_match = roshdf[roshdf['match_id']==_id]
+        #get number of radiant and dire Roshan kills in current match
+        current_rad_kills = len(current_match['player1'][current_match['player1']==2])
+        current_dire_kills = len(current_match['player1'][current_match['player1']==3])
+        #grabs match winner so i dont have to call it 3 times
+        current_winner = GetMatchWinner(_id)[0]
+        
+        if current_rad_kills == current_dire_kills:
+            roshkill_wins['kill_ties'] += 1
+            
+            if current_winner == 'Team 1':
+                roshkill_wins['rad_tie_wins'] += 1
+            else:
+                roshkill_wins['dire_tie_wins'] += 1
+            
+        elif current_rad_kills > current_dire_kills:
+            roshkill_wins['rad_kills'] += 1
+            
+            if current_winner == 'Team 1':
+                roshkill_wins['rad_wins'] += 1
+                
+        elif current_dire_kills > current_rad_kills:
+            roshkill_wins['dire_kills'] += 1
+            
+            if current_winner == 'Team 2':
+                roshkill_wins['dire_wins'] += 1
+
+    return roshkill_wins
 
 if __name__ == '__main__':
 
