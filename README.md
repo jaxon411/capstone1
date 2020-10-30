@@ -38,13 +38,10 @@ Not too surprising, the team with more gold (i.e. more resources) won that match
 Again, not surprising. Now that I had a visual, I decided to dive into the raw numbers insted. Below is some print out of code measuring the probabability of winning given more gold at the end of the game taken from the entire sample:
 
 ```
-{'rad_adv': 25749,
-'dire_adv': 24251,
-'rad_wins': 25378,
-'dire_wins': 23686,
-'adv_ties': 0,
-'rad_tie_wins': 0,
-'dire_tie_wins': 0}
+Radiant Gold Advantage: 25749
+Dire Gold Advantage: 24251
+Radiant Wins | Gold Advantage: 25378
+Dire Wins | Gold Advantage: 23686
 
 Radiant win-rate given they had most gold at the end of the game = 0.99
 Dire win-rate given they had most gold at the end of the game = 0.98
@@ -106,13 +103,14 @@ Unfortunately the week time constraint didn't allow me to delve any deeper on th
 * Look at win rates for teams who have higher gold totals at a given time
 
 ```
-gold_adv_at_15 = {'rad_adv': 25953,
- 'dire_adv': 23962,
- 'rad_wins': 18150,
- 'dire_wins': 16222,
- 'adv_ties': 4,
- 'rad_tie_wins': 3,
- 'dire_tie_wins': 1}
+Radiant Gold Advantage @ 15 min: 25953
+Dire Gold Advantage @ 15 min: 23962
+Radiant Wins | Gold Advantage @ 15 min: 18150
+Dire Wins | Gold Advantage @ 15 min: 16222
+Gold Ties @ 15 min: 4
+Radiant Wins | Gold Tie @ 15 min: 3
+Dire Wins | Gold Tie @ 15 min: 1
+
 Radiant win-rate given the most gold at 15 minutes = 0.7
 Dire win-rate given the most gold at 15 minutes = 0.68
 ```
