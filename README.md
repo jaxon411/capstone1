@@ -7,7 +7,9 @@ https://www.kaggle.com/devinanzelmo/dota-2-matches
 Other useful resources that informed my understanding of the data:
 
 Web API Wiki - https://wiki.teamfortress.com/wiki/WebAPI#Dota_2
+
 Web API Developer forum - https://dev.dota2.com/forum/dota-2/spectating/replays/webapi
+
 Dota 2 Gameplay Wiki - https://dota2.gamepedia.com/Dota_2_Wiki
 
 ## What is Dota 2?
