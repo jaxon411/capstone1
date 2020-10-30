@@ -91,7 +91,7 @@ Ha = Roshan Control improves Dire's chances of winning relative to the raw win p
 CI = 0.05
 ```
 
-I treated winning andnot winning as a Bernoulli trial and utilized some Bayesian magic (also known as Bayesian testing) to find the most likely P-Values. I gathered the number of wins for each team *given* that they had Roshan Control and created a binomial distribution with it.
+I treated winning and not winning as a Bernoulli trial and utilized some Bayesian magic (also known as Bayesian testing) to find the most likely P-Values. I gathered the number of wins for each team *given* that they had Roshan Control and created a binomial distribution with it.
 
 Finally, to accomplish the Bayesian testing, I created two beta distributions for the prior probabilities, which is updated by their wins and losses as alpha and beta respectively. Here are the results after testing:
 
