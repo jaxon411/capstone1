@@ -15,7 +15,7 @@ Dota 2 Gameplay Wiki - https://dota2.gamepedia.com/Dota_2_Wiki
 
 ## What is Dota 2?
 
-Dota 2 is a competitive video game in the **MOBA** grenre (**multiplayer online battle arena**). As a MOBA, it features two teams of five players each, with both teams attempting to push down the map in order to destroy the other team's base.
+Dota 2 is a competitive video game in the **MOBA** grenre (**multiplayer online battle arena**). As a MOBA, it features two teams of five players each, with both teams attempting to push down the map in order to destroy the other team's base (known as an **Ancient**).
 
 ![Image](https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8d/Labelled_Map_7.20.png/revision/latest?cb=20181122205641&format=original)
 
@@ -128,5 +128,5 @@ Dire win-rate given the most gold at 15 minutes = 0.68
 ```
 
 * Look at win rates for teams that score First Blood (first kill of the game)
-* Look at win rates for teams that destroy more/less Towers (obticles needed to overcome before destroying the Fountain)
+* Look at win rates for teams that destroy more/less Towers (obtacles that need to be destroyed before destroying the enemy Ancient)
 * Then eventually, string some or all of these into a Bayesian test to 
