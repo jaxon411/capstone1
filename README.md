@@ -2,13 +2,13 @@
 
 ## What is Dota 2?
 
-Dota 2 is a competitive video game in the MOBA grenre (multiplayer online battle arena). As a MOBA, it features two teams of five players each, and both teams are attempting to push down the map in order to destroy the other team's base.
+Dota 2 is a competitive video game in the MOBA grenre (multiplayer online battle arena). As a MOBA, it features two teams of five players each, with both teams attempting to push down the map in order to destroy the other team's base.
 
 ![Image](https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8d/Labelled_Map_7.20.png/revision/latest?cb=20181122205641&format=original)
 
-The image above shows the two sides of the maps that both teams start and spawn in (named Radiant and Dire). I try to keep the color's consistant in the graphs below.
+The image above shows the two sides of the map that both teams (named Radiant and Dire) spawn into. I try to keep the colors (green and red respectively) consistant in the graphs below.
 
-The main focus of this project at first was to detail the impact of having objective/resource control on a a teams chances at winning. However, after modeling the data, I found some unexpected results that changed the direction of my analysis.
+The main focus of this project at first was to detail the impact of having objective/resource control on a a team's chances at winning. However, after modeling the data, I found some unexpected results that changed the direction of my analysis.
 
 
 ## Gold
