@@ -1,10 +1,10 @@
 # Dota 2: *Dire* Chances at Winning and How to Give your Team the Best Odds
 
 ## Dataset
-My data came from the Dota 2 Matches kaggle dataset:
+**Dota 2 Matches kaggle dataset:**
 https://www.kaggle.com/devinanzelmo/dota-2-matches
 
-Other useful resources that informed my understanding of the data:
+**Other useful resources that informed my understanding of the data:**
 
 Web API Wiki - https://wiki.teamfortress.com/wiki/WebAPI#Dota_2
 
