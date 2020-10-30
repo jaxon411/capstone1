@@ -79,7 +79,7 @@ I'm not sure what exactly could cause this, but after a little bit of research I
 
 ## Roshan Control
 
-**Roshan** is the most powerful neutral objective in the game. It gives many benificial affects to a team if they kill it, and the fact that it's neutral means that either team can get it.
+**Roshan** is the most powerful neutral objective in the game. It gives many benificial effects to a team if they kill it, and the fact that it's neutral means that either team can get it.
 
 However, one important difference is that Roshan's position is nearly all inside of the Dire portion of the map. I decided to run a test to see if this positioning meant that Dire teams who prioritized what I call **Roshan Control** (killing Roshan more often than your oppoents) would have a better win-rate than the raw probability.
 
