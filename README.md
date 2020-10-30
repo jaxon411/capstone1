@@ -19,11 +19,11 @@ Gold is a resource in Dota 2 that lets you buy gear to improve your character th
 
 Here is the first chart I made, simply plotting the sum of gold for each team over the course of the game, as well as the eventual winner of the match:
 
-![Image]
+![Image](https://i.imgur.com/Or1Wq1h.png)
 
 Not too surprising, the team with more gold (i.e. more resources) won that match. Next, I plotted 16 other matches, selected at random:
 
-![Image]
+![Image](https://i.imgur.com/LOiykX6.png)
 
 Again, not surprising. Now that I had a visual, I decided to dive into the raw numbers insted. Below is some print out of code measuring the probabability of winning given more gold at the end of the game taken from the entire sample:
 
@@ -50,9 +50,9 @@ And I'm glad I did.
 
 To analyze the overall win-rates of the two teams, I decided to leaverage bootstrapping to give me a normal distribution of win-rates. Here is the result for both Radiant and Dire teams:
 
-![Image]
+![Image](https://i.imgur.com/VPfH2by.png)
 
-![Image]
+![Image](https://i.imgur.com/VEkpjAT.png)
 
 **Woah.** That is very unexpected. I'm not familiar with the nuances of competative Dota 2 play, but I have some general knowledge of MOBAs, and I would expect that the goal is to get it as close to 50/50 as possible.
 
@@ -68,7 +68,7 @@ To do this, I treated winning andnot winning as a Bernoulli trial and utilized s
 
 Finally, to accomplish the Bayesian testing, I created two beta distributions for the prior probabilities, which is updated by their wins and losses as alpha and beta respectively. Here are the results after testing:
 
-![Image]
+![Image](https://i.imgur.com/scfckoi.png)
 
 Nope, didn't help at all! In fact, not only did it not help, but the difference between winrates went from ~4% to ~10%. In other words, if both teams prioritize Roshan Control, Radiant benifits more statistically than Dire does if they're successful.
 
