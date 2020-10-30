@@ -1,5 +1,15 @@
 # Dota 2: *Dire* Chances at Winning and How to Give your Team the Best Odds
 
+## Dataset
+My data came from the Dota 2 Matches kaggle dataset:
+https://www.kaggle.com/devinanzelmo/dota-2-matches
+
+Other useful resources that informed my understanding of the data:
+
+Web API Wiki - https://wiki.teamfortress.com/wiki/WebAPI#Dota_2
+Web API Developer forum - https://dev.dota2.com/forum/dota-2/spectating/replays/webapi
+Dota 2 Gameplay Wiki - https://dota2.gamepedia.com/Dota_2_Wiki
+
 ## What is Dota 2?
 
 Dota 2 is a competitive video game in the MOBA grenre (multiplayer online battle arena). As a MOBA, it features two teams of five players each, with both teams attempting to push down the map in order to destroy the other team's base.
