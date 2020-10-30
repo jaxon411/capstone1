@@ -2,6 +2,7 @@
 
 ## Dataset
 **Dota 2 Matches kaggle dataset:**
+
 https://www.kaggle.com/devinanzelmo/dota-2-matches
 
 **Other useful resources that informed my understanding of the data:**
