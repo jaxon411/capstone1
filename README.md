@@ -15,11 +15,11 @@ Dota 2 Gameplay Wiki - https://dota2.gamepedia.com/Dota_2_Wiki
 
 ## What is Dota 2?
 
-Dota 2 is a competitive video game in the MOBA grenre (multiplayer online battle arena). As a MOBA, it features two teams of five players each, with both teams attempting to push down the map in order to destroy the other team's base.
+Dota 2 is a competitive video game in the **MOBA** grenre (**multiplayer online battle arena**). As a MOBA, it features two teams of five players each, with both teams attempting to push down the map in order to destroy the other team's base.
 
 ![Image](https://static.wikia.nocookie.net/dota2_gamepedia/images/8/8d/Labelled_Map_7.20.png/revision/latest?cb=20181122205641&format=original)
 
-The image above shows the two sides of the map that both teams (named Radiant and Dire) spawn into. I try to keep the colors (green and red respectively) consistant in the graphs below.
+The image above shows the two sides of the map that both teams (named **Radiant** and **Dire**) spawn into. I try to keep the colors (green and red respectively) consistant in the graphs below.
 
 The main focus of this project at first was to detail the impact of having objective/resource control on a a team's chances at winning. However, after modeling the data, I found some unexpected results that changed the direction of my analysis.
 
@@ -58,7 +58,16 @@ And I'm glad I did.
 
 ## Win-rates of Radiant and Dire
 
-To analyze the overall win-rates of the two teams, I decided to leaverage bootstrapping to give me a normal distribution of win-rates. Here is the result for both Radiant and Dire teams:
+To analyze the overall win-rates of the two teams, I started with the raw probabilities:
+
+```
+Radiant Overall Winrate = 0.52
+Dire Overall Winrate = 0.48
+```
+
+These two numbers don't give us much information other than what we would tend to expect; about a 50/50 split.
+
+To give some visual representation, and to potentially do a hypothesis test, I decided to leaverage bootstrapping to give me a normal distribution of win-rates. Here is the result for both Radiant and Dire teams:
 
 ![Image](https://i.imgur.com/VPfH2by.png)
 
@@ -70,9 +79,9 @@ I'm not sure what exactly could cause this, but after a little bit of research I
 
 ## Roshan Control
 
-Roshan is the most powerful neutral objective in the game. It gives many benificial affects to a team if they kill it, and the fact that it's neutral means that either team can get it.
+**Roshan** is the most powerful neutral objective in the game. It gives many benificial affects to a team if they kill it, and the fact that it's neutral means that either team can get it.
 
-However, one important difference is that Roshan's position is nearly all inside of the Dire portion of the map. I decided to run a test to see if this positioning meant that Dire teams who prioritized what I call Roshan Control (killing Roshan more often than your oppoents) would have a better win-rate than the raw probability.
+However, one important difference is that Roshan's position is nearly all inside of the Dire portion of the map. I decided to run a test to see if this positioning meant that Dire teams who prioritized what I call **Roshan Control** (killing Roshan more often than your oppoents) would have a better win-rate than the raw probability.
 
 To do this, I came up with this hypothesis test:
 
@@ -88,7 +97,7 @@ Finally, to accomplish the Bayesian testing, I created two beta distributions fo
 
 ![Image](https://i.imgur.com/scfckoi.png)
 
-Nope, didn't help at all! In fact, not only did it not help, but the difference between winrates went from ~4% to ~10%. In other words, if both teams prioritize Roshan Control, Radiant benifits more statistically than Dire does if they're successful.
+Nope, didn't help at all! In fact, not only did it not help, but the difference between winrates went from **~4%** to **~10%**. In other words, if both teams prioritize Roshan Control, Radiant benifits more statistically than Dire does if they're successful.
 
 Maybe not a great bet for Dire, then...
 
