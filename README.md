@@ -64,7 +64,15 @@ Roshan is the most powerful neutral objective in the game. It gives many benific
 
 However, one important difference is that Roshan's position is nearly all inside of the Dire portion of the map. I decided to run a test to see if this positioning meant that Dire teams who prioritized what I call Roshan Control (killing Roshan more often than your oppoents) would have a better win-rate than the raw probability.
 
-To do this, I treated winning andnot winning as a Bernoulli trial and utilized some Bayesian magic (also known as Bayesian testing) to find the most likely P-Values. I gathered the number of wins for each team *given* that they had Roshan Control and created a binomial distribution with it.
+To do this, I came up with this hypothesis test:
+
+```
+H0 = Roshan Control gives no better statistical advantage to Dire relative to the raw win probability (>=3%)
+Ha = Roshan Control improves Dire's chances of winning relative to the raw win probability (<3%)
+CI = 0.05
+```
+
+I treated winning andnot winning as a Bernoulli trial and utilized some Bayesian magic (also known as Bayesian testing) to find the most likely P-Values. I gathered the number of wins for each team *given* that they had Roshan Control and created a binomial distribution with it.
 
 Finally, to accomplish the Bayesian testing, I created two beta distributions for the prior probabilities, which is updated by their wins and losses as alpha and beta respectively. Here are the results after testing:
 
