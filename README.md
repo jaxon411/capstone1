@@ -16,5 +16,6 @@ The main focus of this project details the impact of the following objectives on
 # First Blood
 
 First blood, as the name implies, is the first kill of the game. Every kill awards gold in Dota 2, but first blood awards an additional 135 gold on top of the normal gold you receive. For perspective, the normal gold ammount awarded for a kill follows this formula:
+
 ```120 + (killed hero level × 8) + streak value```
 
