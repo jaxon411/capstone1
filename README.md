@@ -86,8 +86,8 @@ However, one important difference is that Roshan's position is nearly all inside
 To do this, I came up with this hypothesis test:
 
 ```
-H0 = Roshan Control gives no better statistical advantage to Dire relative to the raw win probability (>=3%)
-Ha = Roshan Control improves Dire's chances of winning relative to the raw win probability (<3%)
+H0 = Roshan Control gives no better statistical advantage to Dire relative to the raw win probability (>=4%)
+Ha = Roshan Control improves Dire's chances of winning relative to the raw win probability (<4%)
 CI = 0.05
 ```
 
