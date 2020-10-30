@@ -88,7 +88,7 @@ To do this, I came up with this hypothesis test:
 ```
 H0 = Roshan Control gives no better statistical advantage to Dire relative to the raw win probability (>=4%)
 Ha = Roshan Control improves Dire's chances of winning relative to the raw win probability (<4%)
-CI = 0.05
+alpha = 0.05
 ```
 
 I treated winning and not winning as a Bernoulli trial and utilized some Bayesian magic (also known as Bayesian testing) to find the most likely P-Values. I gathered the number of wins for each team *given* that they had Roshan Control and created a binomial distribution with it.
@@ -97,7 +97,7 @@ Finally, to accomplish the Bayesian testing, I created two beta distributions fo
 
 ![Image](https://i.imgur.com/scfckoi.png)
 
-Nope, didn't help at all! In fact, not only did it not help, but the difference between winrates went from **~4%** to **~10%**. In other words, if both teams prioritize Roshan Control, Radiant benifits more statistically than Dire does if they're successful.
+Nope, it didn't help at all! We can't reject the null unfortunately. In fact, not only did iy **not** help, but the difference between winrates went from **~4%** to **~10%**. In other words, if both teams prioritize Roshan Control, Radiant benifits more statistically than Dire does if they're successful.
 
 Maybe not a great bet for Dire, then...
 
