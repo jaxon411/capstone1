@@ -119,24 +119,72 @@ def GetRoshanTeamKills ():
 
 if __name__ == '__main__':
 
-    #plotting
-    example_match = np.random.randint(0,50000)
-    winner,win_color = GetMatchWinner(example_match)
-    y1,y2,x = GoldValsThruMatch(example_match)
+    #plotting grid of 16 random games total gold values
+    fig, axs = plt.subplots(4,4, figsize=(18,10))
 
-    fig, ax = plt.subplots()
+    for i in range(4):
+        for j in range(4):
+            example_match = np.random.randint(0,50000)
+            winner,win_color = GetMatchWinner(example_match)
+            y1,y2,x = GoldValsThruMatch(example_match)
 
-    ax.plot(x,y1, label='Team1',color='blue')
-    ax.plot(x,y2, label='Team2',color='red')
+            axs[i,j].plot(x,y1, label='Team1',color='blue')
+            axs[i,j].plot(x,y2, label='Team2',color='red')
 
-    #Formatting
-    ax.set_title('Team gold totals over the course of the match \n (match_id={})'.format(example_match),y=1.1,fontsize=18)
-    ax.set_xlabel('Match Time (in minutes)')
-    ax.set_ylabel('Team Gold Total', rotation=0, labelpad=60)
-    ax.text(0.5,.8,"Match Winner: \n" + winner,
-            bbox=dict(edgecolor=win_color,facecolor='none',pad=5),
-            horizontalalignment='center',
-            verticalalignment='center',
-            transform=ax.transAxes)
-    ax.legend()
+            #Formatting
+
+            
+            axs[i,j].text(0.5,.8,"    ",
+                    bbox=dict(facecolor=win_color,pad=5),
+                    horizontalalignment='center',
+                    verticalalignment='center',
+                    transform=axs[i,j].transAxes)
+            
+            axs[i,j].text(0.3,.8,"winner:",fontsize = 14,
+                    bbox=dict(facecolor='none',pad=5),
+                    horizontalalignment='center',
+                    verticalalignment='center',
+                    transform=axs[i,j].transAxes)
+
+    axs[0,0].legend(bbox_to_anchor=(3.9, 1.6), loc='upper left', ncol=1, fontsize = 15)
+            
+    axs[0,1].set_title('Team gold totals over the course of the match',x=1.1,y=1.1,fontsize=25)
+    axs[3,1].set_xlabel('Match Time (in minutes)',x=1.2,fontsize=25)
+    axs[2,0].set_ylabel('Team\nGold', rotation=0, labelpad=40, y=1, fontsize= 20)
     fig.show()
+    #end of block
+
+    #plot of Roshan Kill Win Likelihood Under Null Hypothesis
+    
+    #this dict is data from GetRoshanTeamKills()
+    #I'm setting it here explicitly so it won't run on __main__ every time
+    rosh_kills = {'rad_kills': 16487,
+    'dire_kills': 23092,
+    'rad_wins': 14550,
+    'dire_wins': 18017,
+    'kill_ties': 4408,
+    'rad_tie_wins': 2494,
+    'dire_tie_wins': 1914}
+
+    binomeal_null = stats.binom(n=rosh_kills['rad_kills'], p=.5) #null hypothesis is p of 50% win rate
+
+    fig, ax= plt.subplots(figsize = (12,5))
+    x = np.arange(rosh_kills['rad_kills'])
+
+    ax.plot(x,binomeal_null.pmf(x))
+
+    ax.text(0.8,0.8,"P-Value = {}".format(1-binomeal_null.cdf(14550)),fontsize = 14,
+                    bbox=dict(facecolor='none',pad=5),
+                    horizontalalignment='center',
+                    verticalalignment='center',
+                    transform=ax.transAxes)
+
+    ax.set_xlim(7900,8600)
+    ax.fill_between(x,binomeal_null.pmf(x),
+                where=(x>=14550), color='blue', alpha=0.5)
+    ax.set_title("Number of Wins Observed Under The Null Hypothesis\n(50/50 chance of winning given more Roshan kills)", y=1.1)
+    ax.set_xlabel('Number of Wins')
+    ax.set_ylabel('Probability', rotation=0, labelpad=40)
+    fig.show()
+    #end of block
+
