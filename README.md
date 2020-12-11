@@ -105,7 +105,7 @@ Maybe not a great bet for Dire, then...
 
 **Takeaways**
 * Gold is a major predictor for win-rates in every game, but it's essentially useless for player information.
-* Dire team, for all metrics I've tested for so far, have an overall lower win-rate.
+* Dire teams, for all metrics I've tested for so far, have an overall lower win-rate.
 * Roshan Control (killing Roshan more than the opposing team) gives a *significant* boost to win-rate, but Radiant benifits more than Dire.
 
 Since team selection in Dota 2 is random, a player doesn't have the option to always play Radiant. Given what we see from the analysis above, the only bit of advice I can give for a player drafted onto the Dire team is:
