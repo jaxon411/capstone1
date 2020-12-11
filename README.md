@@ -1,6 +1,6 @@
 # Dota 2: *Dire* Chances at Winning and How to Give your Team the Best Odds
 
-## Dataset
+## Resources
 **Dota 2 Matches kaggle dataset:**
 
 https://www.kaggle.com/devinanzelmo/dota-2-matches
