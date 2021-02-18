@@ -23,7 +23,7 @@ The image above shows the two sides of the map that both teams (named **Radiant*
 
 The main focus of this project at first was to detail the impact of having objective/resource control on a a team's chances at winning. However, after modeling the data, I found some unexpected results that changed the direction of my analysis.
 
-## The Data
+## The Data - 50,000 Matches
 
 The data itself consisted of four spreadsheets containing various information for **50,000** Dota 2 matches. The spreadsheets were organized in the following manner:
 * **match_outcomes.csv:** Holds information about each matches unique id, the players in the match, and the start time of the match.
