@@ -23,6 +23,17 @@ The image above shows the two sides of the map that both teams (named **Radiant*
 
 The main focus of this project at first was to detail the impact of having objective/resource control on a a team's chances at winning. However, after modeling the data, I found some unexpected results that changed the direction of my analysis.
 
+## The Data
+
+The data itself consisted of four spreadsheets containing various information for **50,000** Dota 2 matches. The spreadsheets were organized in the following manner:
+* **match_outcomes.csv:** Holds information about each matches unique id, the players in the match, and the start time of the match.
+* **match.csv:** Contains infomration logged about the state of the game once it ends; duration of the match, how many towers each team has remaining, when first blood occurred, what game mode was played, and ultimately which team won.
+* **player_time.csv:** Contains time series information for various resources during each match logged at one minute intervals. Resources include gold, experience points, and "last hits" (which indicates how many times a player killed an enemy NPC for gold).
+* **objectives.csv:** Holds chat logs for various game events known as "objectives." This includes things like first blood, tower kill, barracks kill, aegis grabbing/stealing, and Roshan kills.
+
+The objectives.csv contents might be a little confusing since we might not know what something like a "barracks kill" means in context. To make it simple, objectives in Dota 2 can be thought of as important parts of the map that give a powerful advantage a team manages to complete that objective.
+
+Now that we have more information about what this dataset actually *contains*, let's take a closer look at where my exploration led me.
 
 ## Gold
 
