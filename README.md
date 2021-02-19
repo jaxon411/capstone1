@@ -1,4 +1,4 @@
-# Dota 2: *Dire* Chances at Winning and How to Give your Team the Best Odds
+# Dota 2: The *Dire* State of Winrate Disparities
 
 ## Resources
 **Dota 2 Matches kaggle dataset:**
